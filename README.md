@@ -46,17 +46,29 @@ The project demonstrates concepts of:
 
  
 ai_resume_analyzer/
+
 |
+
 |_app.py
+
 |
+
 |_skills.py
+
 |
+
 |_requirements.txt
+
 |
+
 |_templates/
+
   |
+  
   |__index.html
+  
 |__uploads/
+
 
 
 ## Installation
