@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>AI Resume Analyzer</title>
+
+    <style>
+
+        body{
+            font-family: Arial;
+            padding:40px;
+            background:#f4f4f4;
+        }
+
+        .container{
+            background:white;
+            padding:30px;
+            border-radius:10px;
+            width:500px;
+            margin:auto;
+        }
+
+        h1{
+            color:#333;
+        }
+
+        button{
+            padding:10px 20px;
+            background:#007bff;
+            color:white;
+            border:none;
+            border-radius:5px;
+        }
+
+    </style>
+</head>
+
+<body>
+
+<div class="container">
+
+    <h1>AI Resume Analyzer</h1>
+
+    <form method="POST" enctype="multipart/form-data">
+
+        <input type="file" name="resume" required>
+        <br><br>
+
+        <button type="submit">Analyze Resume</button>
+
+    </form>
+
+    {% if result %}
+
+        <hr>
+
+        <h3>Detected Skills:</h3>
+        <p>{{ result.skills }}</p>
+
+        <h3>ATS Score:</h3>
+        <p>{{ result.score }}%</p>
+
+        <h3>Suggested Role:</h3>
+        <p>{{ result.role }}</p>
+
+    {% endif %}
+
+</div>
+
+</body>
+</html>
